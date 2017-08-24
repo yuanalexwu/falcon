@@ -1,0 +1,14 @@
+[
+  [
+    {"type": "card", "name": "device_number"},
+    {"type": "card", "name": "alarm_number"},
+    {"type": "card", "name": "issue_number"}
+  ],
+  [
+    {"type": "chart"},
+    {"type": "table"}
+  ],
+  [
+    {"type": "map"}
+  ]
+]

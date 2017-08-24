@@ -1,0 +1,16 @@
+.ant-layout {
+    background: #f3f3f3!important;
+}
+.ant-menu-dark.ant-menu-inline .ant-menu-item-selected {
+    background: #222D32!important;
+}
+.ant-btn-primary {
+    olor: #fff!important;
+    background-color: #5cb85c!important;
+    border-color: #4cae4c!important;
+}
+.ant-btn-primary:hover {
+    color: #fff!important;
+    background-color: #449d44!important;
+    border-color: #398439!important;
+}
