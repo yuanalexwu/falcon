@@ -7,18 +7,16 @@
     ["故障停机", 20],
     ["正常停机", 400]
   ],
-  "table": [
-    {"id": "asdfasd", "time": "2016/11/06 12:22:43", "device": "带式输送机", "type": "泵站油压警报", "levet": 1},
-    {"id": "asdfasd", "time": "2016/11/06 12:22:43", "device": "带式输送机", "type": "泵站油压警报", "levet": 1},
-    {"id": "asdfasd", "time": "2016/11/06 12:22:43", "device": "带式输送机", "type": "泵站油压警报", "levet": 1},
-    {"id": "asdfasd", "time": "2016/11/06 12:22:43", "device": "带式输送机", "type": "泵站油压警报", "levet": 1},
-    {"id": "asdfasd", "time": "2016/11/06 12:22:43", "device": "带式输送机", "type": "泵站油压警报", "levet": 1}
-  ],
+  "table": {
+    "total": 243,
+    "list": [
+      {"id": "asdfasd", "time": "2016/11/06 12:22:43", "device": "带式输送机", "type": "泵站油压警报", "level": 1},
+      {"id": "asdfasd", "time": "2016/11/06 12:22:43", "device": "带式输送机", "type": "泵站油压警报", "level": 1},
+      {"id": "asdfasd", "time": "2016/11/06 12:22:43", "device": "带式输送机", "type": "泵站油压警报", "level": 1},
+      {"id": "asdfasd", "time": "2016/11/06 12:22:43", "device": "带式输送机", "type": "泵站油压警报", "level": 1},
+      {"id": "asdfasd", "time": "2016/11/06 12:22:43", "device": "带式输送机", "type": "泵站油压警报", "level": 1}
+  ]},
   "map": [
-    {"id": "asdfa", "pos": [123, 212], "name": "带式输送机"},
-    {"id": "asdfa", "pos": [123, 212], "name": "带式输送机"},
-    {"id": "asdfa", "pos": [123, 212], "name": "带式输送机"},
-    {"id": "asdfa", "pos": [123, 212], "name": "带式输送机"},
-    {"id": "asdfa", "pos": [123, 212], "name": "带式输送机"}
+    {"id": "exabed3ljekkl3asdkljkl9njkh1kjlj2kjkjh3j2gae", "pos": [121.15, 31.89], "name": "带式输送机", "costomer": "苏州德姆斯"}
   ]
 }

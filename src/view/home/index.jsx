@@ -2,6 +2,11 @@ import React, {Component} from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {getHomeConfig} from '../../action/home'
+import {Row, Col} from 'antd'
+import Chart from './chart'
+import Table from './table'
+import ChinaMap from './china_map'
+import './index.css'
 
 function mapStateToProps (state) {
   const {home = {}} = state
@@ -22,10 +27,37 @@ class Home extends Component {
   }
 
   render () {
-    const {configList} = this.props
-    console.log('render() ', configList)
+    const {configList} = this.props // eslint-disable-line
+
     return (
-      <div>asdfasd</div>
+      <div>
+        <Row>
+          <Col
+            xs={{span: 24}}
+            sm={{span: 24}}
+            md={{span: 24}}
+            lg={{span: 12}}
+          >
+            <Chart />
+          </Col>
+          <Col
+            xs={{span: 24}}
+            sm={{span: 24}}
+            md={{span: 24}}
+            lg={{span: 12}}
+          >
+            <Table />
+          </Col>
+        </Row>
+        <Row>
+          <Col
+            xs={{span: 24}}
+            sm={{span: 24}}
+          >
+            <ChinaMap />
+          </Col>
+        </Row>
+      </div>
     )
   }
 }
