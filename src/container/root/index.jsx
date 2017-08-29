@@ -1,13 +1,14 @@
-import React, {Component} from 'react'
-import {Route, Link, Switch, Redirect} from 'react-router-dom'
-import {Layout, Menu, Icon} from 'antd'
-import {getUserInfo, getMenu, parsePathWithAppPrefix} from 'app/util'
+import React, { Component } from 'react'
+import { Route, Link, Switch, Redirect } from 'react-router-dom'
+import { Layout, Menu, Icon } from 'antd'
+import { getUserInfo, getMenu, parsePathWithAppPrefix } from 'app/util'
 import Home from 'app/view/home'
 import NoMatch from 'app/view/no_match'
 import Loading from 'app/components/loading'
 import UserBar from 'app/view/user_bar'
-import './antd.css'
-import './index.css'
+import logo from 'public/img/logo.png'
+
+import './index.scss'
 
 const {Header, Content, Footer, Sider} = Layout
 const {Item} = Menu
@@ -63,20 +64,19 @@ class Root extends Component {
         transition: 'all .3s'
       }
       const menuName = !collapsed ? <span>{name}</span> : null
-      const itemWrapper = {position: 'relative', fontSize: '17px'}
       const selectedLineStyle = {
         position: 'absolute',
         width: 5,
-        height: 42,
+        height: 58,
         marginLeft: -24,
-        background: '#FD8A03'
+        background: '#389EFF'
       }
       return (
-        <Item key={idx} style={itemWrapper}>
+        <Item key={idx}>
           {
             selectedKey === `${idx}`
-            ? <div style={selectedLineStyle} />
-            : null
+              ? <div style={selectedLineStyle} />
+              : null
           }
           <Link to={path}>
             <Icon type={icon} style={iconStyle} />
@@ -110,9 +110,9 @@ class Root extends Component {
     const {pathname: currentPath = ''} = location
     const minHeight = this.getContentHeight()
     const {menuItems, selectedKey} = this.getMenuInfo(collapsed, currentPath)
-    const logoText = collapsed ? 'D' : 'DHMS'
+    const logoImg = collapsed ? 'D' : <img src={logo} />
     return (
-      <Layout>
+      <Layout className='dan-dhms'>
         <Loading />
         <Sider
           breakpoint='lg'
@@ -121,34 +121,32 @@ class Root extends Component {
           collapsed={collapsed}
         >
           <Link to={parsePathWithAppPrefix('/')}>
-            <div className='root-logo'>{logoText}</div>
+            <div className='root-logo'>{logoImg}</div>
           </Link>
           <Menu theme='dark' mode='inline' selectedKeys={[selectedKey]}>
             {menuItems}
           </Menu>
         </Sider>
         <Layout>
-          <Header style={{background: '#fff', padding: 0}}>
-            <div className='service-head'>
-              <span style={{lineHeight: '75px'}}>
-                <Icon
-                  type={collapsed ? 'menu-unfold' : 'menu-fold'}
-                  onClick={this.toggleCollapse}
-                  className='root-side-trigger'
+          <Header>
+            <span className='menu-trigger'>
+              <Icon
+                type={collapsed ? 'menu-unfold' : 'menu-fold'}
+                onClick={this.toggleCollapse}
+                className='root-side-trigger'
               />
-              </span>
-              <UserBar />
-            </div>
+            </span>
+            <UserBar />
           </Header>
-          <Content style={{margin: '24px 16px 0'}}>
-            <div style={{minHeight}}>
+          <Content style={{margin: `0 30px`}}>
+            <div style={{minHeight, overflow: 'hidden'}}>
               <Switch>
                 <Route exact path={parsePathWithAppPrefix('/')} component={Home} />
                 <Route component={NoMatch} />
               </Switch>
             </div>
           </Content>
-          <Footer style={{textAlign: 'center'}}>
+          <Footer style={{textAlign: 'left'}} className='footer'>
             DHMS ©2017 Use Antd
           </Footer>
         </Layout>

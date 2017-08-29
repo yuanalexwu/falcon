@@ -5,13 +5,17 @@ import {
 import {notification} from 'antd'
 
 export function getUserInfo () {
-  return {userId: 1, name: 'dan_zhu'}
+  return {userId: 1, name: '系统管理员'}
 }
 
 export function getMenu () {
   return [
         {name: '总览', path: '/', icon: 'home'},
-        {name: '设备', path: `/device`, icon: 'device'},
+        {name: '统计/分析', path: `/count`, icon: 'line-chart'},
+        {name: '设备管理', path: `/device`, icon: 'appstore-o'},
+        {name: '系统管理', path: `/system`, icon: 'exception'},
+        {name: '消息中心', path: `/news`, icon: 'bell'},
+        {name: '基本信息', path: `/basic`, icon: 'solution'},
   ]
 }
 
