@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const faker = require('faker')
+const faker = require('faker') // eslint-disable-line
 
 const home_request = {
   getHomeConfig () {

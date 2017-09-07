@@ -1,7 +1,7 @@
 {
-  "device_num": 2345,
-  "alarm_num": 1234,
-  "issue_num": 3212,
+  "device": {"name": "设备数量", "num": 2345},
+  "alarm": {"name": "报警提醒量", "num": 1234},
+  "issue": {"name": "工单数量", "num": 2345},
   "chart": [
     ["正常运行", 100],
     ["故障停机", 20],

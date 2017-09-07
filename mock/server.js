@@ -6,8 +6,8 @@ const homeApi = require('./home/home_request')
 const app = express()
 
 const PORT = 9999
-const API_PREFIX = '/api'
-const HOME_PATH = `${API_PREFIX}/home`
+// const API_PREFIX = '/api'
+// const HOME_PATH = `${API_PREFIX}/home`
 
 // parse json data from POST
 app.use(bodyParser.json())
@@ -17,13 +17,13 @@ app.use(morgan('combined'))
 /**
  * HOME
  */
-
 // Get home config
-app.post(HOME_PATH, function (req, res) {
+app.post('/api/home', function (req, res) {
   const jsonData = req.body
   const {action = ''} = jsonData
   let data
   if (action === 'getHomeConfig') {
+    console.log('getHomeConfig')
     data = homeApi.getHomeConfig()
   } else if (action === 'updateHomeConfig') {
     const {config = []} = jsonData
@@ -44,7 +44,6 @@ app.post(HOME_PATH, function (req, res) {
     devmsg: '',
     data
   }
-  console.log(responseData)
   res.json(responseData)
 })
 

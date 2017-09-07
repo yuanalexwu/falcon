@@ -6,12 +6,14 @@
     "antd": "^2.10.2",
     "bootstrap": "^3.3.7",
     "classnames": "^2.2.5",
+    "echarts": "^3.7.0",
     "moment": "^2.18.1",
     "prop-types": "^15.5.6",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
     "react-redux": "^5.0.4",
     "react-router-dom": "^4.1.1",
+    "react-sortable": "^1.2.0",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "signals": "^1.0.0"
@@ -122,5 +124,5 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "http://localhost:9999/api"
+  "proxy": "http://127.0.0.1:9999"
 }

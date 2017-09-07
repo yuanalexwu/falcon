@@ -6,6 +6,10 @@ export default function home (state = {}, action = {}) {
       const {configList = []} = action
       return {...state, configList}
     }
+    case ActionTypes.GET_HOME_DATA_SUCCESS : {
+      const {configData = []} = action
+      return {...state, configData}
+    }
     default: {
       return state
     }

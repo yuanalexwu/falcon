@@ -1,10 +1,10 @@
-import {noop, isFunc, parsePathWithAppPrefix} from 'app/util'
+import {noop, isFunc} from '../util'
 import {
   POST,
   STATUS_SUCCESS,
 } from '../common'
 import * as ActionType from '../constant'
-import { default as apiConfig } from 'app/config'
+import { default as apiConfig } from '../config'
 
 const {apiUrl} = apiConfig
 
@@ -19,12 +19,7 @@ function baseFetch (option, dispatch) {
 
   // Parse host or prefix for all api url
   if (apiUrl) {
-    // If we got a new apiUrl, just prepend it to the url,
-    // and it's not necessary to add `app prefix` to a new api
-    // url
     url = `${apiUrl}${url}`
-  } else {
-    url = parsePathWithAppPrefix(url)
   }
 
   const fetchOption = {

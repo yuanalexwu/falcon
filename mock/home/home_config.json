@@ -1,14 +1,13 @@
 [
-  [
-    {"type": "card", "name": "device_number"},
-    {"type": "card", "name": "alarm_number"},
-    {"type": "card", "name": "issue_number"}
-  ],
-  [
-    {"type": "chart"},
-    {"type": "table"}
-  ],
-  [
-    {"type": "map"}
-  ]
+  {
+    "type": "card",
+    "list": ["device", "alarm", "issue"]
+  },
+  {
+    "type": "chart",
+    "list": ["device_chart", "repair_table"]
+  },
+  {
+    "type": "map"
+  }
 ]
